@@ -1,0 +1,12 @@
+program plap
+natural ii;
+natural n1;
+natural n2;
+begin
+	read(n1);
+	read(n2);
+	for ii in n1..n2
+	do
+		write(ii);
+	done
+end

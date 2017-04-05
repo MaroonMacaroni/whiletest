@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./deep.while"
+compile $SOURCE
+testOutput "" "10 " "$SOURCE"

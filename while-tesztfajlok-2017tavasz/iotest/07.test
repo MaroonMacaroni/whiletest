@@ -1,0 +1,6 @@
+#!/bin/bash
+. ./test
+SOURCE="$BASEDIR/correct/07.ok"
+compile $SOURCE
+testOutput "3
+123" "123 123 123 " "$SOURCE"

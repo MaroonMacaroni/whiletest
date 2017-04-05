@@ -1,0 +1,9 @@
+program plap
+begin
+	write(not false=false);
+	write(not(3=3));
+	write(not true and false);
+	write(not (true and false));
+	write(not false or true);
+	write(not (false or true));
+end

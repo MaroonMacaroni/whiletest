@@ -1,0 +1,19 @@
+#!/bin/bash
+. ./test
+SOURCE="$BASEDIR/correct/00.ok"
+compile $SOURCE
+testOutput "0" "false " "$SOURCE"
+testOutput "1" "false " "$SOURCE"
+testOutput "2" "false " "$SOURCE"
+testOutput "3" "false " "$SOURCE"
+testOutput "4" "true 2 " "$SOURCE"
+testOutput "5" "false " "$SOURCE"
+testOutput "6" "true 2 " "$SOURCE"
+testOutput "7" "false " "$SOURCE"
+testOutput "8" "true 2 " "$SOURCE"
+testOutput "9" "true 3 " "$SOURCE"
+testOutput "10" "true 2 " "$SOURCE"
+testOutput "11" "false " "$SOURCE"
+testOutput "12" "true 2 " "$SOURCE"
+testOutput "15" "true 3 " "$SOURCE"
+testOutput "25" "true 5 " "$SOURCE"

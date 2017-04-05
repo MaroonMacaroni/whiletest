@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./mod.while"
+compile $SOURCE
+testOutput "" "2 " "$SOURCE"

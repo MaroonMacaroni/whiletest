@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./or.while"
+compile $SOURCE
+testOutput "" "false true true true " "$SOURCE"

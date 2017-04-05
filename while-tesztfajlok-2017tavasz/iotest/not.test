@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./not.while"
+compile $SOURCE
+testOutput "" "false true false true " "$SOURCE"

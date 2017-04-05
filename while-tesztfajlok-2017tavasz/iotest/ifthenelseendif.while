@@ -1,0 +1,13 @@
+program plap
+natural ii;
+natural n1;
+natural n2;
+begin
+	read(n1);
+	read(n2);
+	if n1 < n2 then
+		write(n1);
+	else
+		write(n2);
+	endif
+end

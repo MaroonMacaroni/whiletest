@@ -1,0 +1,18 @@
+program plap
+begin
+	write(1000);
+	write(4*3+2);
+	write(4*(3+2));
+	write(4*3-2);
+	write(4*(3-2));
+	write(1100);
+	write(8 div 3+2);
+	write(8 div (3+2));
+	write(8 div 3-2);
+	write(8 div (3-2));
+	write(1200);
+	write(22 mod 5+2);
+	write(22 mod (5+2));
+	write(22 mod 5-2);
+	write(22 mod (5-2));
+end

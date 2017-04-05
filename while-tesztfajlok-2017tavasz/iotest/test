@@ -1,0 +1,48 @@
+#!/bin/bash
+
+BASEDIR=".."
+OUTPUT=""
+
+function assertOutput {
+	if [ "$1" != "$OUTPUT" ]; then
+		echo error at $2
+		echo expected '"'$1'"'
+		echo output '"'$OUTPUT'"'
+		exit 1
+	fi
+}
+
+function clean {
+	rm -f test.asm test.o test.out test.output
+}
+
+function compile {
+	clean
+	../../bead4/calculate $1 > test.asm
+	if [ "0" != "$?" ]; then
+		echo calculate error at $1
+		exit 1
+	fi
+	nasm -f elf -o test.o test.asm
+	if [ "0" != "$?" ]; then
+		echo nasm error at $1
+		exit 1
+	fi
+	gcc -m32 -o test.out test.o ../../bead4//io.c
+	if [ "0" != "$?" ]; then
+		echo gcc error at $1
+		exit 1
+	fi
+}
+
+function test {
+timeout --foreground 0.5s ./test.out > test.output << DOCDOC
+$1
+DOCDOC
+OUTPUT="$(cat test.output|tr '\n' ' ')"
+}
+
+function testOutput {
+	test "$1"
+	assertOutput "$2" "$3"
+}

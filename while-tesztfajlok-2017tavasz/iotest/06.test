@@ -1,0 +1,7 @@
+#!/bin/bash
+. ./test
+SOURCE="$BASEDIR/correct/06.ok"
+compile $SOURCE
+test "12"
+OUTPUT=${OUTPUT:0:10}
+assertOutput "12 12 12 1" "$SOURCE"

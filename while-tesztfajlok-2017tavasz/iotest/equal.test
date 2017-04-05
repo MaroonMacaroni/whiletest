@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./equal.while"
+compile $SOURCE
+testOutput "" "false true false " "$SOURCE"

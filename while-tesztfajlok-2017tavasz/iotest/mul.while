@@ -1,0 +1,4 @@
+program plap
+begin
+	write(7*4);
+end

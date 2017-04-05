@@ -1,0 +1,12 @@
+program plap
+natural n1;
+natural n2;
+begin
+	read(n1);
+	read(n2);
+	while n1 < n2
+	do
+		write(n1);
+		n1:=n1+1;
+	done
+end

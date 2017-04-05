@@ -1,0 +1,4 @@
+program plap
+begin
+	write(30 mod 7);
+end

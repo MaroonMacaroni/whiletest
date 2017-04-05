@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./paren.while"
+compile $SOURCE
+testOutput "" "21 " "$SOURCE"

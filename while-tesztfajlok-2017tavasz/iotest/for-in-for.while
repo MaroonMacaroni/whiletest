@@ -1,0 +1,19 @@
+program plap
+boolean vanoszto;
+natural ii;
+natural jj;
+natural nn;
+begin
+	read(nn);
+	for ii in 2..nn
+	do
+		vanoszto:=false;
+		for jj in 2..ii-1
+		do
+			vanoszto:=vanoszto or (0=(ii mod jj));
+		done
+		if not vanoszto then
+			write(ii);
+		endif
+	done
+end

@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./div.while"
+compile $SOURCE
+testOutput "" "4 " "$SOURCE"

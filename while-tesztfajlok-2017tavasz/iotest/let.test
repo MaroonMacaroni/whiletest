@@ -1,0 +1,8 @@
+#!/bin/bash
+. ./test
+SOURCE="./let.while"
+compile $SOURCE
+testOutput "true
+false
+1
+2" "true false 1 2 " "$SOURCE"

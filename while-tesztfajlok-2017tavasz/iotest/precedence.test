@@ -1,0 +1,17 @@
+#!/bin/bash
+. ./test
+SOURCE="./precedence.while"
+compile $SOURCE
+testOutput "" "1000 12 12 0 0 1100 2 2 0 0 1200 2 2 0 0 1300 true false " "$SOURCE"
+
+SOURCE="./precedence-not.while"
+compile $SOURCE
+testOutput "" "false false false true true false " "$SOURCE"
+
+SOURCE="./precedence-parenthesis.while"
+compile $SOURCE
+testOutput "" "1000 14 20 10 4 1100 4 1 0 8 1200 4 1 0 1 " "$SOURCE"
+
+SOURCE="./precedence-relations.while"
+compile $SOURCE
+testOutput "" "1000 true false false 1100 true false false 1200 false true false 1300 true false false 1400 true false false 1500 false true true 1600 false false false 1700 true true false 1800 true " "$SOURCE"

@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./write.while"
+compile $SOURCE
+testOutput "" "1 2 true false " "$SOURCE"

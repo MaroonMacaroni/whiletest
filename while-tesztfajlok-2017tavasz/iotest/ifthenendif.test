@@ -1,0 +1,10 @@
+#!/bin/bash
+. ./test
+SOURCE="./ifthenendif.while"
+compile $SOURCE
+testOutput "1
+2" "1 " "$SOURCE"
+testOutput "2
+2" "" "$SOURCE"
+testOutput "3
+2" "" "$SOURCE"

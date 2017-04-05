@@ -1,0 +1,15 @@
+program plap
+boolean b1;
+boolean b2;
+natural n1;
+natural n2;
+begin
+	b1:=true;
+	b2:=false;
+	n1:=1;
+	n2:=2;
+	write(b1);
+	write(b2);
+	write(n1);
+	write(n2);
+end

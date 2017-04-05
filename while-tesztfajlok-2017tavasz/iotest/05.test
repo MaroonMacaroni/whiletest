@@ -1,0 +1,8 @@
+#!/bin/bash
+. ./test
+SOURCE="$BASEDIR/correct/05.ok"
+compile $SOURCE
+testOutput "8" "true " "$SOURCE"
+testOutput "9" "true " "$SOURCE"
+testOutput "10" "false " "$SOURCE"
+testOutput "11" "false " "$SOURCE"

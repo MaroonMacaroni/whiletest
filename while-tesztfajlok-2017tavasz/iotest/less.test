@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./less.while"
+compile $SOURCE
+testOutput "" "true false false " "$SOURCE"

@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./test
+SOURCE="./sub.while"
+compile $SOURCE
+testOutput "" "3 " "$SOURCE"

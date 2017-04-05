@@ -1,0 +1,40 @@
+program plap
+natural max;
+natural min;
+natural n1;
+natural n2;
+natural n3;
+natural n4;
+begin
+	min:=1;
+	max:=10;
+	for n1 in min..max
+	do
+		if n1=1 then
+			n2:=min;
+			while not max<n2
+			do
+				if not n2=2 then
+					skip;
+				else
+					for n3 in min..max
+					do
+						if n3=3 then
+							n4:=max;
+							while not min>n4
+							do
+								if n4=4 then
+									write(n1+n2+n3+n4);
+								endif
+								n4:=n4-1;
+							done
+						else
+							skip;
+						endif
+					done
+				endif
+				n2:=n2+1;
+			done
+		endif
+	done
+end

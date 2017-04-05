@@ -1,0 +1,29 @@
+#!/bin/bash
+
+BASEDIR="../while-tesztfajlok-2017tavasz"
+
+function testDir {
+	for FF in $(ls -1 $BASEDIR/$1|grep -E -e "\\.ok|-hibas|\\.while")
+	do
+		F2="$BASEDIR/$1/$FF"
+		./calculate $F2 > /dev/null 2>&1
+		if [ "$2" != "$?" ]; then
+			echo error at $F2
+			exit 1
+		fi
+	done
+}
+
+make clean
+if [ "0" != "$?" ]; then
+	exit 1
+fi
+make
+if [ "0" != "$?" ]; then
+	exit 1
+fi
+testDir lexical-error 1
+testDir syntactic-error 1
+testDir semantic-error 0
+testDir correct 0
+testDir iotest 0

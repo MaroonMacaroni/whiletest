@@ -1,0 +1,37 @@
+program plap
+begin
+	write(1000);
+	write(1+3=2+2);
+	write(1+3<2+2);
+	write(1+3>2+2);
+	write(1100);
+	write(3-1=4-2);
+	write(3-1<4-2);
+	write(3-1>4-2);
+	write(1200);
+	write(1*3=2*2);
+	write(1*3<2*2);
+	write(1*3>2*2);
+	write(1300);
+	write(3 div 2=4 div 3);
+	write(3 div 2<4 div 3);
+	write(3 div 2>4 div 3);
+	write(1400);
+	write(3 mod 2=4 mod 3);
+	write(3 mod 2<4 mod 3);
+	write(3 mod 2>4 mod 3);
+	write(1500);
+	write(not 3=3);
+	write(not 3<3);
+	write(not 3>3);
+	write(1600);
+	write(3=3 and 3=4);
+	write(3<3 and 3<4);
+	write(3>3 and 3>4);
+	write(1700);
+	write(3=3 or 3=4);
+	write(3<3 or 3<4);
+	write(3>3 or 3>4);
+	write(1800);
+	write(3=4=(3=4));
+end

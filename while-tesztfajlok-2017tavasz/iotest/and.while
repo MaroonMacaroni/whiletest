@@ -1,0 +1,7 @@
+program plap
+begin
+	write(false and false);
+	write(false and true);
+	write(true and false);
+	write(true and true);
+end
